@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Signup page</title>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/resources/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/resources/css/signin.css}"/>
+</head>
+<body>
+
+<div class="container">
+    <form th:object="${resetPasswordDTO}" class="form-signin" th:action="@{/reset_pw}" method="post">
+        <input type="hidden" th:value="${token}" th:field="*{token}"/>
+        <label for="password">New Password:</label>
+        <input class="form-control" type="password" id="password" th:field="*{password}"/>
+        <label th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></label><br/>
+
+        <label for="cf_password">Confirm Password:</label>
+        <input class="form-control" type="password" th:field="*{repassword}" id="cf_password"/><br/>
+        <input class="btn-lg btn-primary btn-block" type="submit" value="Submit"/><br/>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+  - source: target/hp-service-1.0.2.jar
+    destination: /home/ec2-user/
+  - source: runapp.sh
+    destination: /home/ec2-user/
+hooks:
+  AfterInstall:
+    - location: /runapp.sh
+      timeout: 3
+      runas: ec2-user

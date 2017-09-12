@@ -1,0 +1,19 @@
+package com.tdt.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class CandidateDTO {
+    private Long id;
+    private String name;
+    private String phone;
+    private String email;
+    private String location;
+    private String resumeUrl;
+}

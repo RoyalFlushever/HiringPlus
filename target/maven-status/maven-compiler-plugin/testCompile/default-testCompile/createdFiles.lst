@@ -1,0 +1,5 @@
+com/hiringplus/controller/UserControllerTests.class
+com/hiringplus/controller/ReminderControllerIT.class
+com/hiringplus/controller/JobControllerTest.class
+com/hiringplus/controller/CandidateControllerIT.class
+com/hiringplus/controller/CandidateControllerTest.class

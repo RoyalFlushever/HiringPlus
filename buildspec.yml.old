@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - mvn package -Dmaven.test.skip=true
+artifacts:
+  files:
+    - appspec.yml
+    - runapp.sh
+    - target/hp-service-1.0.2.jar
